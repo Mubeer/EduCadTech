@@ -87249,4 +87249,54 @@ body .modal-backdrop {
     max-height: 42px !important;
   }
 }
+
+/* Mobile Header: Horizontal alignment of Admin button and hamburger icon */
+@media (min-width: 992px) {
+  .mobile-admin-btn {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .desktop-admin-btn {
+    display: none !important;
+  }
+  .mobile-menu {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    height: 90px !important;
+  }
+  .menu-area.sticky .mobile-menu,
+  .menu-sticky.sticky .mobile-menu {
+    height: 70px !important;
+  }
+  .mobile-menu .mobile-admin-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    padding: 7px 15px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    border-radius: 4px !important;
+    margin-right: 14px !important;
+    white-space: nowrap !important;
+    text-decoration: none !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+  }
+  .mobile-menu .rs-menu-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: auto !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    padding: 6px !important;
+    font-size: 24px !important;
+    cursor: pointer !important;
+  }
+}
+
 
