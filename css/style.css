@@ -87299,4 +87299,40 @@ body .modal-backdrop {
   }
 }
 
-
+
+/* Shared Course Card Component Styles */
+.courses-item .btn-part a.btn-course-content,
+.btn-course-content {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  background: #ac192b !important;
+  color: #ffffff !important;
+  padding: 8px 16px !important;
+  border-radius: 4px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+  border: 1px solid #ac192b !important;
+  line-height: 1.4 !important;
+}
+.courses-item .btn-part a.btn-course-content:hover,
+.btn-course-content:hover {
+  background: #111111 !important;
+  border-color: #111111 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(172, 25, 43, 0.35) !important;
+}
+.course-duration-info {
+  display: inline-flex !important;
+  align-items: center !important;
+  color: #64748b !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+.course-duration-info i {
+  color: #ac192b !important;
+  margin-right: 5px !important;
+}

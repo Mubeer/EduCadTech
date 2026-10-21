@@ -39,7 +39,7 @@ async function syncPublicCourses() {
             var isSoft = (c.category || '').toLowerCase().indexOf('soft') !== -1;
             var typeClass = isSoft ? 'softskill' : 'technical';
             var durationText = (c.duration_months || 3) + ' Months';
-            var modeText = c.course_type === 'offline' ? 'Offline' : (c.course_type === 'online' ? 'Online' : 'Online / Offline');
+            var modeText = 'Online / Offline';
             var imgSrc = c.image || 'assets/images/courses/1. mechanical draftman.jpg';
 
             return '<div class="col-lg-4 col-md-6 grid-item ' + branchClass + ' ' + typeClass + '">' +
