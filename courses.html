@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+
+<head>
+    <!-- meta tag -->
+    <meta charset="utf-8" />
+    <title>EduCadTech - Education HTML Template</title>
+    <meta content="" name="description" />
+    <!-- responsive tag -->
+    <meta content="ie=edge" http-equiv="x-ua-compatible" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- favicon -->
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="assets/images/fav-orange.png" rel="shortcut icon" type="image/x-icon" />
+    <!-- Bootstrap v4.4.1 css -->
+    <!-- font-awesome css -->
+    <!-- animate css -->
+    <!-- off canvas css -->
+    <!-- linea-font css -->
+    <!-- flaticon css  -->
+    <!-- Main Menu css -->
+    <!-- spacing css -->
+    <!-- style css -->
+    <!-- This stylesheet dynamically changed from style.less -->
+    <!-- responsive css -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+        .mode-badge-dual {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #111111;
+            color: #ffffff !important;
+            border: 1px solid #ac192b;
+            padding: 3px 9px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            line-height: 1.4;
+        }
+        .mode-badge-dual i {
+            color: #ac192b;
+            font-size: 11px;
+        }
+        .courses-item .btn-part a.btn-course-content,
+        .btn-course-content {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 6px !important;
+            background: #ac192b !important;
+            color: #ffffff !important;
+            padding: 8px 16px !important;
+            border-radius: 4px !important;
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            text-decoration: none !important;
+            transition: all 0.25s ease !important;
+            border: 1px solid #ac192b !important;
+            line-height: 1.4 !important;
+        }
+        .courses-item .btn-part a.btn-course-content:hover,
+        .btn-course-content:hover {
+            background: #111111 !important;
+            border-color: #111111 !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 12px rgba(172, 25, 43, 0.35) !important;
+        }
+        .courses-item:hover {
+            transform: translateY(-4px);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+    
+        /* Fixed Aspect Ratio and Uniform Cropping for Course Card Images */
+        .grid-item {
+            margin-bottom: 30px;
+        }
+        .courses-item {
+            display: flex !important;
+            flex-direction: column !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: #ffffff !important;
+            border-radius: 8px !important;
+            overflow: hidden !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+            transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+        }
+        .courses-item:hover {
+            transform: translateY(-4px) !important;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12) !important;
+        }
+        .courses-item .img-part {
+            position: relative !important;
+            width: 100% !important;
+            height: 220px !important;
+            aspect-ratio: 16 / 10 !important;
+            overflow: hidden !important;
+            background-color: #f1f5f9 !important;
+            flex-shrink: 0 !important;
+        }
+        .courses-item .img-part a {
+            display: block !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+        .courses-item .img-part img {
+            width: 100% !important;
+            height: 100% !important;
+            max-width: 100% !important;
+            max-height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            display: block !important;
+            transition: transform 0.35s ease !important;
+        }
+        .courses-item:hover .img-part img {
+            transform: scale(1.05) !important;
+        }
+        .courses-item .content-part {
+            display: flex !important;
+            flex-direction: column !important;
+            flex: 1 1 auto !important;
+            padding: 20px !important;
+        }
+        .courses-item .content-part .title {
+            margin-bottom: 12px !important;
+            font-size: 18px !important;
+            line-height: 1.4 !important;
+            font-weight: 700 !important;
+        }
+        .courses-item .content-part .bottom-part {
+            margin-top: auto !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            padding-top: 14px !important;
+            border-top: 1px solid #f1f5f9 !important;
+        }
+    </style>
+
+</head>
+
+<body class="defult-home">
+    <!--Preloader area start here-->
+    <div class="loader orange-color" id="loader">
+        <div class="loader-container">
+            <div class="loader-icon">
+                <img alt="EduCadTech Logo" src="images/EduCAD Tech Logo header.png" />
+            </div>
+        </div>
+    </div>
+    <!--Preloader area End here-->
+    <!--Full width header Start-->
+    <div class="full-width-header header-style1 home8-style4">
+        <!--Header Start-->
+        <header class="rs-header" id="rs-header">
+            <!-- Topbar Area Start -->
+            <!-- Topbar Area End -->
+            <!-- Menu Start -->
+            <div class="menu-area menu-sticky">
+                <div class="container">
+                    <div class="row y-middle">
+                        <div class="col-lg-2">
+                            <div class="logo-cat-wrap">
+                                <div class="logo-part">
+                                    <a href="index.html">
+                                        <img alt="EduCadTech Logo" src="images/EduCAD Tech Logo header.png" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 text-right">
+                            <div class="rs-menu-area">
+                                <div class="main-menu">
+                                    <div class="mobile-menu">
+                                        <a class="rs-menu-toggle">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                    </div>
+                                    <nav class="rs-menu">
+                                        <ul class="nav-menu">
+                                            <li class=""><a href="index.html">Home</a></li>
+                                            <li class=""><a href="about.html">About</a></li>
+                                            <li class="current-menu-item"><a href="courses.html">Courses</a></li>
+                                            <li class=""><a href="verify.html">Verify-Certificate</a></li>
+                                            <li class=""><a href="certificate.html">Get Certificate</a></li>
+                                            <li class=""><a href="contact.html">Contact</a></li>
+                                        </ul> <!-- //.nav-menu -->
+                                    </nav>
+                                </div> <!-- //.main-menu -->
+                            </div>
+                        </div>
+                        <div class="col-lg-2 text-right">
+                            <a href="admin/login.html" class="readon orange-btn" style="padding: 8px 16px; font-size: 13px; border-radius: 4px;">
+                                <i class="fa fa-lock"></i> Admin
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Menu End -->
+        </header>
+        <!--Header End-->
+    </div>
+    <!--Full width header End-->
+    <!-- Main content Start -->
+    <div class="main-content">
+        <!-- Breadcrumbs Start -->
+        <div class="rs-breadcrumbs breadcrumbs-overlay">
+            <div class="breadcrumbs-img">
+                <img alt="Breadcrumbs Image" src="assets/images/breadcrumbs/2.jpg" />
+            </div>
+            <div class="breadcrumbs-text white-color">
+                <h1 class="page-title">Course Grid </h1>
+                <ul>
+                    <li>
+                        <a class="active" href="index.html">Home</a>
+                    </li>
+                    <li>Course</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Breadcrumbs End -->
+        <!-- Popular Courses Section Start -->
+        <div class="rs-popular-courses style1 orange-color pt-100 md-pt-70" id="rs-popular-courses">
+            <div class="container">
+                <div class="d-flex justify-content-between flex-wrap mb-50">
+                    <div class="gridFilter text-left mb-3 mb-md-0" id="branchFilter">
+                        <button class="active" data-filter="*">ALL</button>
+                        <button data-filter=".filter1">MECH</button>
+                        <button data-filter=".filter2">CIVIL</button>
+                        <button data-filter=".filter3">ECE</button>
+                        <button data-filter=".filter4">EEE</button>
+                        <button data-filter=".filter5">CSE</button>
+                        <button data-filter=".filter6">IT</button>
+                    </div>
+                    <div class="text-right">
+                        <div class="dropdown">
+                            <button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle"
+                                data-toggle="dropdown" id="courseTypeDropdown"
+                                style="background-color: #ac192b; border-color: #ac192b; font-weight: 500; cursor: pointer;"
+                                type="button">
+                                Course Type
+                            </button>
+                            <div aria-labelledby="courseTypeDropdown"
+                                class="dropdown-menu dropdown-menu-right gridFilter" id="typeFilter"
+                                style="padding: 0; min-width: 200px;">
+                                <button class="dropdown-item active" data-filter="*"
+                                    style="width: 100%; border: none; background: transparent; padding: 10px 20px; text-align: left; cursor: pointer;">ALL</button>
+                                <button class="dropdown-item" data-filter=".technical"
+                                    style="width: 100%; border: none; background: transparent; padding: 10px 20px; text-align: left; cursor: pointer;">Technical
+                                    Course</button>
+                                <button class="dropdown-item" data-filter=".softskill"
+                                    style="width: 100%; border: none; background: transparent; padding: 10px 20px; text-align: left; cursor: pointer;">Soft
+                                    Skill Course</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row grid">
+
+                    <div class="col-lg-4 col-md-6 grid-item filter1 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=mechanical-draftsman">
+                                    <img alt="Mechanical Draftsman" src="assets/images/courses/1. mechanical draftman.jpg" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=mechanical-draftsman">Mechanical Draftsman</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 3 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=mechanical-draftsman" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter1 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=design-engineer">
+                                    <img alt="Design Engineer" src="assets/images/courses/2. Design Engineer.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=design-engineer">Design Engineer</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 6 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=design-engineer" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter1 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=manufacturing-engineer">
+                                    <img alt="Manufacturing Engineer" src="assets/images/courses/3. Manufacturing Engineer.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=manufacturing-engineer">Manufacturing Engineer</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 4 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=manufacturing-engineer" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter1 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=cfd-analyst">
+                                    <img alt="CFD Analyst" src="assets/images/courses/4. CFD Analysis.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=cfd-analyst">CFD Analyst</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 4 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=cfd-analyst" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter1 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=quality-engineer">
+                                    <img alt="Quality Engineer" src="assets/images/courses/5. Quality Engineer.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=quality-engineer">Quality Engineer</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 3 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=quality-engineer" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter2 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=advanced-land-surveyor">
+                                    <img alt="Advanced Land Surveyor" src="assets/images/courses/16. Advanced Land Surveyor.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=advanced-land-surveyor">Advanced Land Surveyor</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 3 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=advanced-land-surveyor" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter2 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=construction-supervisor">
+                                    <img alt="Construction Supervisor" src="assets/images/courses/17. Supervisor.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=construction-supervisor">Construction Supervisor</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 3 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=construction-supervisor" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter2 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=civil-engg-draftsman">
+                                    <img alt="Civil Engg Draftsman" src="assets/images/courses/18. Civil Engg Draftman.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=civil-engg-draftsman">Civil Engg Draftsman</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 3 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=civil-engg-draftsman" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter2 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=structural-designer">
+                                    <img alt="Structural Designer" src="assets/images/courses/19. Structural Designer.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=structural-designer">Structural Designer</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 6 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=structural-designer" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter2 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=interior-designer">
+                                    <img alt="Interior Designer" src="assets/images/courses/20. Interior Designer.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=interior-designer">Interior Designer</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 4 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=interior-designer" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter4 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=electrical-cadd">
+                                    <img alt="Electrical CADD" src="assets/images/courses/27. Electrical CAAD.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=electrical-cadd">Electrical CADD</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 3 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=electrical-cadd" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter4 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=matlab-simulink">
+                                    <img alt="MATLAB-Simulink" src="assets/images/courses/28. MATLAB.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=matlab-simulink">MATLAB-Simulink</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 3 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=matlab-simulink" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter4 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=robotics-automation">
+                                    <img alt="Robotics & Automation" src="assets/images/courses/29. Robotics.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=robotics-automation">Robotics & Automation</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 4 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=robotics-automation" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter4 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=instrumentation-control">
+                                    <img alt="Instrumentation & Control" src="assets/images/courses/30. Instrumentation.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=instrumentation-control">Instrumentation & Control</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 3 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=instrumentation-control" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter4 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=embedded-systems-eee">
+                                    <img alt="Embedded Systems EEE" src="assets/images/courses/31. Embedded.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=embedded-systems-eee">Embedded Systems EEE</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 4 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=embedded-systems-eee" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter3 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=vlsi-design">
+                                    <img alt="VLSI Design" src="assets/images/courses/33. VLSI.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=vlsi-design">VLSI Design</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 6 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=vlsi-design" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter3 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=embedded-systems-ece">
+                                    <img alt="Embedded Systems ECE" src="assets/images/courses/31. Embedded.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=embedded-systems-ece">Embedded Systems ECE</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 4 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=embedded-systems-ece" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter3 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=pcb-design">
+                                    <img alt="PCB Design" src="assets/images/courses/32. PCB.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=pcb-design">PCB Design</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 3 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=pcb-design" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter3 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=robotics-ece">
+                                    <img alt="Robotics ECE" src="assets/images/courses/29. Robotics.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=robotics-ece">Robotics ECE</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 4 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=robotics-ece" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter3 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=networking-ccna">
+                                    <img alt="Networking-CCNA" src="assets/images/courses/34. Networking .png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=networking-ccna">Networking-CCNA</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 3 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=networking-ccna" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter5 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=core-java-programming">
+                                    <img alt="Core Java Programming" src="assets/images/courses/38. Java.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=core-java-programming">Core Java Programming</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 3 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=core-java-programming" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter5 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=full-stack-web-development">
+                                    <img alt="Full Stack Web Development" src="assets/images/courses/40. web designing.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=full-stack-web-development">Full Stack Web Development</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 6 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=full-stack-web-development" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter5 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=advance-java-frameworks">
+                                    <img alt="Advance Java & Frameworks" src="assets/images/courses/39. Advance java.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=advance-java-frameworks">Advance Java & Frameworks</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 4 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=advance-java-frameworks" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter5 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=android-app-development">
+                                    <img alt="Android App Development" src="assets/images/courses/44. Android.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=android-app-development">Android App Development</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 4 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=android-app-development" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter5 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=python-sql-data-engineering">
+                                    <img alt="Python & SQL Data Engineering" src="assets/images/courses/42. SQL.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=python-sql-data-engineering">Python & SQL Data Engineering</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 4 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=python-sql-data-engineering" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter6 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=networking-ccna-it">
+                                    <img alt="Networking-CCNA IT" src="assets/images/courses/34. Networking .png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=networking-ccna-it">Networking-CCNA IT</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 3 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=networking-ccna-it" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter6 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=web-designing-ui-ux">
+                                    <img alt="Web Designing & UI/UX" src="assets/images/courses/40. web designing.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=web-designing-ui-ux">Web Designing & UI/UX</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 3 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=web-designing-ui-ux" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter6 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=database-management-sql">
+                                    <img alt="Database Management & SQL" src="assets/images/courses/42. SQL.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=database-management-sql">Database Management & SQL</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 3 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=database-management-sql" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter6 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=cloud-computing-hadoop">
+                                    <img alt="Cloud Computing & Hadoop" src="assets/images/courses/46. Hadoop.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=cloud-computing-hadoop">Cloud Computing & Hadoop</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 4 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=cloud-computing-hadoop" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid-item filter6 technical">
+                        <div class="courses-item mb-30">
+                            <div class="img-part">
+                                <a href="course-content.html?course=tallyprime-financial-accounting">
+                                    <img alt="TallyPrime & Financial Accounting" src="assets/images/courses/49. Tally.png" />
+                                </a>
+                            </div>
+                            <div class="content-part">
+                                <ul class="meta-part" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <li><a class="categorie">Technical Course</a></li>
+                                    <li>
+                                        <span class="mode-badge-dual">
+                                            <i class="fa fa-globe"></i> Online / Offline
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3 class="title">
+                                    <a href="course-content.html?course=tallyprime-financial-accounting">TallyPrime & Financial Accounting</a>
+                                </h3>
+                                <div class="bottom-part" style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9;">
+                                    <div class="course-duration-info" style="color: #64748b; font-size: 13px; font-weight: 500;">
+                                        <i class="fa fa-clock-o" style="color: #ac192b; margin-right: 4px;"></i> 2 Months
+                                    </div>
+                                    <div class="btn-part">
+                                        <a href="course-content.html?course=tallyprime-financial-accounting" class="btn-course-content">
+                                            <i class="fa fa-book"></i> Course Content
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Popular Courses Section End -->
+
+    <!-- Newsletter section start -->
+    <!-- Newsletter section end -->
+    <!-- Main content End -->
+    <!-- Newsletter section start -->
+    <div class="rs-newsletter style1 orange-color mb--90 sm-mb-0 sm-pb-70">
+        <div class="container">
+            <div class="newsletter-wrap">
+                <div class="row y-middle">
+                    <div class="col-lg-6 col-md-12 md-mb-30">
+                        <div class="content-part">
+                            <div class="sec-title">
+                                <div class="title-icon md-mb-15">
+                                    <img alt="images" src="assets/images/newsletter.png" />
+                                </div>
+                                <h2 class="title mb-0 white-color"> Feel Free To Contact</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="btn-part">
+                            <a class="readon orange-btn transparent" href="contact.html">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter section end -->
+    <!-- Footer Start -->
+    <footer class="rs-footer home9-style main-home" id="rs-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget md-mb-50">
+                        <div class="footer-logo mb-30">
+                            <a href="index.html"><img alt="EduCadTech Logo" src="images/EduCAD Tech Logo footer.png" /></a>
+                        </div>
+                        <div class="textwidget pr-60 md-pr-15">
+                            <p class="white-color">We are EduCadTech, providing expert-led courses to help you advance
+                                your career. We empower learners with knowledge and practical skills.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget md-mb-50">
+                        <h3 class="widget-title">Quick Links</h3>
+                        <ul class="site-map">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="verify.html">Verify Certificate</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget md-mb-50">
+                        <h3 class="widget-title">Contact Info</h3>
+                        <ul class="address-widget">
+                            <li>
+                                <i class="flaticon-location"></i>
+                                <div class="desc">No 6B, PMR Tower, Ambattur I.E, Chennai - 58</div>
+                            </li>
+                            <li>
+                                <i class="flaticon-call"></i>
+                                <div class="desc">
+                                    <a href="tel:+91 8056812352">+91 8056812352</a>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="flaticon-email"></i>
+                                <div class="desc">
+                                    <a href="mailto:educadmanager01@gmail.com">educadmanager01@gmail.com</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget">
+                        <h3 class="widget-title">Social Media</h3>
+                        <ul class="footer_social">
+                            <li>
+                                <a href="#" target="_blank"><span><i class="fa fa-facebook"></i></span></a>
+                            </li>
+                            <li>
+                                <a href="# " target="_blank"><span><i class="fa fa-twitter"></i></span></a>
+                            </li>
+                            <li>
+                                <a href="# " target="_blank"><span><i class="fa fa-pinterest-p"></i></span></a>
+                            </li>
+                            <li>
+                                <a href="# " target="_blank"><span><i class="fa fa-google-plus-square"></i></span></a>
+                            </li>
+                            <li>
+                                <a href="# " target="_blank"><span><i class="fa fa-instagram"></i></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row y-middle">
+                    <div class="col-lg-12 text-center">
+                        <div class="copyright">
+                            <p>© 2026 EduCadTech. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- start scrollUp  -->
+    <div class="orange-color" id="scrollUp">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <!-- End scrollUp  -->
+    <!-- Search Modal Start -->
+    <div aria-hidden="true" class="modal fade search-modal" role="dialog" tabindex="-1">
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+            <span class="flaticon-cross"></span>
+        </button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="search-block clearfix">
+                    <form>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Search Here..." type="text" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search Modal End -->
+    <!-- modernizr js -->
+    <!-- jquery latest version -->
+    <!-- Popper js -->
+    <script crossorigin="anonymous"
+        integrity="sha512-ubuT8Z88WxezgSqf3RLuNi5lmjstiJcyezx34yIU2gAHonIi27Na7atqzUZCOoY4CExaoFumzOsFQ2Ch+I/HCw=="
+        referrerpolicy="no-referrer"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <!-- Bootstrap v4.4.1 js -->
+    <!-- Menu js -->
+    <!-- op nav js -->
+    <!-- wow js -->
+    <!-- isotope.pkgd.min js -->
+    <!-- imagesloaded.pkgd.min js -->
+    <!-- plugins js -->
+    <!-- magnific popup js -->
+    <!-- contact form js -->
+    <!-- main js -->
+    <script src="js/script.js"></script>
+    <script src="js/enrollment.js"></script>
+    <script src="js/courses-sync.js"></script>
+    <script>
+        // Pre-activate correct category button on page load from ?category=
+        window.addEventListener('DOMContentLoaded', function() {
+            var params = new URLSearchParams(window.location.search);
+            var cat = params.get('category');
+            if (cat) {
+                var catMap = {
+                    'mech': '.filter1',
+                    'mechanical': '.filter1',
+                    'civil': '.filter2',
+                    'civil-engineering': '.filter2',
+                    'ece': '.filter3',
+                    'eee': '.filter4',
+                    'cse': '.filter5',
+                    'cs': '.filter5',
+                    'computer-science': '.filter5',
+                    'it': '.filter6'
+                };
+                var sel = catMap[cat.toLowerCase()];
+                if (sel) {
+                    var targetBtn = document.querySelector('#branchFilter button[data-filter="' + sel + '"]');
+                    var allBtn = document.querySelector('#branchFilter button[data-filter="*"]');
+                    if (targetBtn && allBtn) {
+                        allBtn.classList.remove('active');
+                        targetBtn.classList.add('active');
+                    }
+                }
+            }
+        });
+    </script>
+    <a href="https://wa.me/919003799721" id="whatsapp-btn"
+        style="position:fixed; bottom:20px; left:20px; z-index:9999; background:#25D366; color:white; padding:10px 15px; border-radius:50px; font-size:24px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2);"
+        target="_blank"><i class="fa fa-whatsapp"></i></a>
+</body>
+
+</html>

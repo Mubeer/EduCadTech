@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- meta tag -->
+    <meta charset="utf-8" />
+    <title>Certificate Portal - EduCadTech</title>
+    <meta content="Student Certificate Generation and Credential Download Portal" name="description" />
+    <meta content="ie=edge" http-equiv="x-ua-compatible" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- favicon -->
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="assets/images/fav-orange.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        .cert-portal-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            padding: 40px;
+            border: 1px solid #eef2f6;
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+        }
+        .cert-result-card {
+            display: none;
+            margin-top: 35px;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            background: #f8fafc;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .demo-guide-box {
+            background: #fff7ed;
+            border: 1px dashed #ac192b;
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-top: 25px;
+            font-size: 13.5px;
+            color: #9a3412;
+        }
+    </style>
+</head>
+
+<body class="defult-home">
+    <!--Preloader area start here-->
+    <div class="loader orange-color" id="loader">
+        <div class="loader-container">
+            <div class="loader-icon">
+                <img alt="EduCadTech Logo" src="images/EduCAD Tech Logo header.png" />
+            </div>
+        </div>
+    </div>
+    <!--Preloader area End here-->
+
+    <!--Full width header Start-->
+    <div class="full-width-header home8-style4 main-home">
+        <header class="rs-header" id="rs-header">
+            <div class="menu-area menu-sticky">
+                <div class="container">
+                    <div class="row y-middle">
+                        <div class="col-lg-2">
+                            <div class="logo-cat-wrap">
+                                <div class="logo-part">
+                                    <a href="index.html">
+                                        <img alt="EduCadTech Logo" class="normal-logo" src="images/EduCAD Tech Logo header.png" />
+                                        <img alt="EduCadTech Logo" class="sticky-logo" src="images/EduCAD Tech Logo header.png" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 text-right">
+                            <div class="rs-menu-area">
+                                <div class="main-menu">
+                                    <div class="mobile-menu">
+                                        <a class="rs-menu-toggle">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                    </div>
+                                    <nav class="rs-menu">
+                                        <ul class="nav-menu">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="courses.html">Courses</a></li>
+                                            <li><a href="verify.html">Verify Certificate</a></li>
+                                            <li class="current-menu-item"><a href="certificate.html">Get Certificate</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 text-right">
+                            <a href="admin/login.html" class="readon orange-btn" style="padding: 8px 18px; font-size: 13px;">
+                                <i class="fa fa-lock"></i> Admin
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <!--Full width header End-->
+
+    <!-- Main content Start -->
+    <div class="main-content">
+        <!-- Breadcrumbs Start -->
+        <div class="rs-breadcrumbs breadcrumbs-overlay">
+            <div class="breadcrumbs-img">
+                <img alt="Breadcrumbs Image" src="assets/images/breadcrumbs/6.jpg" />
+            </div>
+            <div class="breadcrumbs-text white-color">
+                <h1 class="page-title">Student Certificate Portal</h1>
+                <ul>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li>Certificate Generation</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Breadcrumbs End -->
+
+        <!-- Lookup Section Start -->
+        <div class="rs-inner-blog pt-50 pb-100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="cert-portal-card">
+                            <div class="sec-title text-center mb-30">
+                                <div class="sub-title orange">Official Credential Registry</div>
+                                <h2 class="title mb-0">Retrieve Your Certificate</h2>
+                                <p style="color: #64748b; font-size: 14.5px; margin-top: 8px;">
+                                    Enter your unique Registration Reference and registered email address to check course completion and download your official PDF certificate.
+                                </p>
+                            </div>
+
+                            <form id="lookupForm">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label style="font-weight: 600; color: #1e293b; font-size: 13.5px;">Registration Reference *</label>
+                                        <input type="text" id="inputRegCode" class="form-control" placeholder="e.g. REG-2026-10001" required
+                                               style="height: 48px; border-radius: 6px; border: 1px solid #cbd5e1; padding: 10px 15px; font-size: 14px;">
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label style="font-weight: 600; color: #1e293b; font-size: 13.5px;">Registered Email Address *</label>
+                                        <input type="email" id="inputEmail" class="form-control" placeholder="e.g. arun.kumar@example.com" required
+                                               style="height: 48px; border-radius: 6px; border: 1px solid #cbd5e1; padding: 10px 15px; font-size: 14px;">
+                                    </div>
+                                    <div class="col-12 text-center mt-20">
+                                        <button type="submit" id="lookupBtn" class="readon orange-btn" style="padding: 13px 35px; border-radius: 6px; font-weight: 600;">
+                                            <i class="fa fa-search"></i> Check Certificate Eligibility
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- Demo Test Hints -->
+                            <div class="demo-guide-box">
+                                <strong><i class="fa fa-lightbulb-o"></i> Demo Testing Hint:</strong><br>
+                                &bull; <strong>Eligible Completed Course:</strong> Ref: <code>REG-2026-10001</code> &nbsp;|&nbsp; Email: <code>arun.kumar@example.com</code><br>
+                                &bull; <strong>In-Progress Course:</strong> Ref: <code>REG-2026-10002</code> &nbsp;|&nbsp; Email: <code>sneha.patel@example.com</code>
+                            </div>
+
+                            <!-- Result Card -->
+                            <div id="certResultCard" class="cert-result-card"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="rs-footer home9-style main-home" id="rs-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget md-mb-50">
+                        <div class="footer-logo mb-30">
+                            <a href="index.html"><img alt="EduCadTech Logo" src="images/EduCAD Tech Logo footer.png" /></a>
+                        </div>
+                        <div class="textwidget pr-60 md-pr-15">
+                            <p class="white-color">We are EduCadTech, providing expert-led courses to help you advance your career. We empower learners with knowledge and practical skills.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget md-mb-50">
+                        <h3 class="widget-title">Quick Links</h3>
+                        <ul class="site-map">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="verify.html">Verify Certificate</a></li>
+                            <li><a href="certificate.html">Get Certificate</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget md-mb-50">
+                        <h3 class="widget-title">Contact Info</h3>
+                        <ul class="address-widget">
+                            <li><i class="flaticon-location"></i><div class="desc">No 6B, PMR Tower, Ambattur I.E, Chennai - 58</div></li>
+                            <li><i class="flaticon-call"></i><div class="desc"><a href="tel:+91 8056812352">+91 8056812352</a></div></li>
+                            <li><i class="flaticon-email"></i><div class="desc"><a href="mailto:educadmanager01@gmail.com">educadmanager01@gmail.com</a></div></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget">
+                        <h3 class="widget-title">Admin Access</h3>
+                        <p style="color: #cbd5e1; font-size: 13.5px; margin-bottom: 12px;">Authorized staff and management dashboard:</p>
+                        <a href="admin/login.html" class="readon orange-btn" style="padding: 8px 18px; font-size: 13px;">
+                            <i class="fa fa-lock"></i> Admin Portal
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row y-middle">
+                    <div class="col-lg-12 text-center">
+                        <div class="copyright">
+                            <p>© 2026 EduCadTech. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        let cachedRegCode = '';
+        let cachedEmail = '';
+
+        document.getElementById('lookupForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('lookupBtn');
+            const resultCard = document.getElementById('certResultCard');
+            
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Verifying with Database...';
+            resultCard.style.display = 'none';
+
+            cachedRegCode = document.getElementById('inputRegCode').value.trim();
+            cachedEmail = document.getElementById('inputEmail').value.trim();
+
+            try {
+                const res = await fetch('/api/certificates/lookup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ reg_code: cachedRegCode, email: cachedEmail })
+                });
+                const data = await res.json();
+
+                resultCard.style.display = 'block';
+
+                if (!res.ok || !data.success) {
+                    resultCard.style.borderColor = '#ef4444';
+                    resultCard.style.background = '#fef2f2';
+                    resultCard.innerHTML = `
+                        <div style="display: flex; gap: 14px; align-items: flex-start;">
+                            <i class="fa fa-times-circle" style="color: #ef4444; font-size: 26px; margin-top: 3px;"></i>
+                            <div>
+                                <h4 style="color: #991b1b; font-size: 18px; font-weight: 700; margin-bottom: 6px;">Registration Not Found</h4>
+                                <p style="color: #b91c1c; font-size: 14px; margin-bottom: 0;">${data.error || 'No active registration matches this reference and email.'}</p>
+                            </div>
+                        </div>
+                    `;
+                    return;
+                }
+
+                const r = data.registration;
+                const cert = data.certificate;
+
+                if (!data.eligible) {
+                    // Not eligible yet
+                    resultCard.style.borderColor = '#f59e0b';
+                    resultCard.style.background = '#fffbeb';
+                    resultCard.innerHTML = `
+                        <div style="display: flex; gap: 16px; align-items: flex-start;">
+                            <i class="fa fa-clock-o" style="color: #d97706; font-size: 32px; margin-top: 2px;"></i>
+                            <div style="flex: 1;">
+                                <h4 style="color: #92400e; font-size: 18px; font-weight: 700; margin-bottom: 6px;">Course In Progress</h4>
+                                <p style="color: #b45309; font-size: 14px; margin-bottom: 12px;">${data.reason}</p>
+                                
+                                <div style="background: rgba(255,255,255,0.8); border: 1px solid #fde68a; border-radius: 8px; padding: 14px 18px; font-size: 13.5px; color: #451a03;">
+                                    <div><strong>Student:</strong> ${r.student_name}</div>
+                                    <div><strong>Enrolled Course:</strong> ${r.course_title}</div>
+                                    <div><strong>Start Date:</strong> ${r.start_date} (${r.duration_months} Months duration)</div>
+                                    <div><strong>Eligibility Date:</strong> <span style="font-weight: 700; color: #b45309;">${r.eligibility_date}</span></div>
+                                </div>
+                                <p style="font-size: 13px; color: #78350f; margin-top: 12px; margin-bottom: 0;">
+                                    <em>Note: Certificates are generated automatically once your configured duration has elapsed, or upon manual early completion by your authorized EduCadTech instructor.</em>
+                                </p>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    // Eligible!
+                    resultCard.style.borderColor = '#10b981';
+                    resultCard.style.background = '#f0fdf4';
+
+                    let actionsHtml = '';
+                    if (cert) {
+                        actionsHtml = `
+                            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px;">
+                                <a href="/api/certificates/${cert.certificate_number}/download" target="_blank" class="readon orange-btn" style="padding: 10px 24px; border-radius: 6px; font-size: 14px;">
+                                    <i class="fa fa-download"></i> Download PDF Certificate
+                                </a>
+                                <a href="verify.html?cert=${cert.certificate_number}" target="_blank" class="readon transparent-btn" style="padding: 10px 24px; border-radius: 6px; font-size: 14px; border: 1px solid #10b981; color: #065f46;">
+                                    <i class="fa fa-check-circle"></i> Public Verification Page
+                                </a>
+                            </div>
+                        `;
+                    } else {
+                        actionsHtml = `
+                            <div style="margin-top: 18px;">
+                                <button type="button" onclick="generateMyCertificate()" id="genCertBtn" class="readon orange-btn" style="padding: 10px 26px; border-radius: 6px; font-size: 14px;">
+                                    <i class="fa fa-magic"></i> Generate Official Certificate Now
+                                </button>
+                            </div>
+                        `;
+                    }
+
+                    resultCard.innerHTML = `
+                        <div style="display: flex; gap: 16px; align-items: flex-start;">
+                            <i class="fa fa-graduation-cap" style="color: #10b981; font-size: 34px; margin-top: 2px;"></i>
+                            <div style="flex: 1;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                                    <h4 style="color: #065f46; font-size: 19px; font-weight: 700; margin-bottom: 4px;">Course Completed &amp; Certificate Eligible!</h4>
+                                    <span style="background: #dcfce7; color: #15803d; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; text-transform: uppercase;">
+                                        Verified Completed
+                                    </span>
+                                </div>
+                                <p style="color: #047857; font-size: 14px; margin-bottom: 14px;">
+                                    Congratulations <strong>${r.student_name}</strong>! You have fulfilled all requirements for <strong>${r.course_title}</strong>.
+                                </p>
+
+                                <div style="background: rgba(255,255,255,0.9); border: 1px solid #bbf7d0; border-radius: 8px; padding: 15px 20px; font-size: 13.5px; color: #1e293b;">
+                                    <div class="row">
+                                        <div class="col-sm-6 mb-2"><strong>Student Name:</strong> ${r.student_name}</div>
+                                        <div class="col-sm-6 mb-2"><strong>Course Title:</strong> ${r.course_title}</div>
+                                        <div class="col-sm-6 mb-2"><strong>Start Date:</strong> ${r.start_date}</div>
+                                        <div class="col-sm-6 mb-2"><strong>Completion Date:</strong> ${r.completion_date}</div>
+                                        ${cert ? `<div class="col-sm-12" style="color: #ac192b; font-weight: 700; font-size: 14px; margin-top: 4px;">Certificate ID: <code>${cert.certificate_number}</code></div>` : ''}
+                                    </div>
+                                </div>
+
+                                <div id="actionArea">
+                                    ${actionsHtml}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+            } catch (err) {
+                resultCard.style.display = 'block';
+                resultCard.style.borderColor = '#ef4444';
+                resultCard.style.background = '#fef2f2';
+                resultCard.innerHTML = `<p style="color: #b91c1c; margin: 0;">Server error: ${err.message}</p>`;
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fa fa-search"></i> Check Certificate Eligibility';
+            }
+        });
+
+        async function generateMyCertificate() {
+            const btn = document.getElementById('genCertBtn');
+            if (btn) {
+                btn.disabled = true;
+                btn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Generating PDF Certificate...';
+            }
+
+            try {
+                const res = await fetch('/api/certificates/generate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ reg_code: cachedRegCode, email: cachedEmail })
+                });
+                const data = await res.json();
+
+                if (!res.ok || !data.success) {
+                    alert(data.error || 'Failed to generate certificate.');
+                    if (btn) {
+                        btn.disabled = false;
+                        btn.innerHTML = '<i class="fa fa-magic"></i> Generate Official Certificate Now';
+                    }
+                    return;
+                }
+
+                // Re-trigger form submit to render download buttons
+                document.getElementById('lookupBtn').click();
+            } catch (err) {
+                alert('Network error: ' + err.message);
+                if (btn) {
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fa fa-magic"></i> Generate Official Certificate Now';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

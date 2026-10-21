@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login - EduCadTech</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/images/fav-orange.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="admin.css">
+  <style>
+    .login-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      background: radial-gradient(circle at 50% 20%, #1e293b 0%, #0b1120 70%);
+    }
+    .login-card {
+      background: rgba(17, 24, 39, 0.95);
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 40px;
+      width: 100%;
+      max-width: 440px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(12px);
+    }
+    .login-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .login-header img {
+      max-height: 48px;
+      margin-bottom: 16px;
+    }
+    .login-header h2 {
+      font-size: 1.4rem;
+      color: #fff;
+      font-weight: 700;
+    }
+    .login-header p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .demo-hint {
+      background: rgba(172, 25, 43, 0.1);
+      border: 1px dashed var(--primary);
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin-top: 24px;
+      font-size: 0.82rem;
+      color: #fed7aa;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .demo-hint i {
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+    .alert-error {
+      background: var(--danger-bg);
+      border: 1px solid var(--danger);
+      color: #fca5a5;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      margin-bottom: 18px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-header">
+        <a href="../index.html"><img src="../images/EduCAD Tech Logo header.png" alt="EduCadTech Logo"></a>
+        <h2>Administrator Portal</h2>
+        <p>Enter your credentials to access the management dashboard</p>
+      </div>
+
+      <div id="errorAlert" class="alert-error">
+        <i class="fa fa-exclamation-circle"></i> <span id="errorMsg">Invalid credentials</span>
+      </div>
+
+      <form id="loginForm" autocomplete="off">
+        <div class="form-group">
+          <label class="form-label" for="username"><i class="fa fa-user"></i> Username</label>
+          <input type="text" id="username" class="form-control" placeholder="Enter administrator username" required autofocus autocomplete="off">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="password"><i class="fa fa-lock"></i> Password</label>
+          <input type="password" id="password" class="form-control" placeholder="Enter administrator password" required autocomplete="off">
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 12px; margin-top: 8px;" id="loginBtn">
+          <span>Log In to Dashboard</span> <i class="fa fa-arrow-right"></i>
+        </button>
+      </form>
+
+      <div class="demo-hint">
+        <i class="fa fa-info-circle"></i>
+        <div>
+          <strong>Demo Credentials:</strong><br>
+          Username: <code>admin</code> &nbsp;|&nbsp; Password: <code>admin123</code>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 22px;">
+        <a href="../index.html" style="color: var(--text-muted); font-size: 0.84rem; text-decoration: none;">
+          <i class="fa fa-home"></i> Back to Public Website
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Ensure clean state on login page
+    localStorage.removeItem('admin_token');
+    localStorage.removeItem('admin_user');
+    document.getElementById('username').value = '';
+    document.getElementById('password').value = '';
+
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const errorAlert = document.getElementById('errorAlert');
+      const errorMsg = document.getElementById('errorMsg');
+      const loginBtn = document.getElementById('loginBtn');
+
+      errorAlert.style.display = 'none';
+      loginBtn.disabled = true;
+      loginBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Authenticating...';
+
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+
+      try {
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password })
+        });
+        const data = await res.json();
+
+        if (data.success && data.token) {
+          localStorage.setItem('admin_token', data.token);
+          localStorage.setItem('admin_user', JSON.stringify(data.admin));
+          window.location.href = 'index.html';
+        } else {
+          errorMsg.textContent = data.error || 'Login failed. Please check credentials.';
+          errorAlert.style.display = 'block';
+        }
+      } catch (err) {
+        errorMsg.textContent = 'Network or server error. Please ensure the server is running.';
+        errorAlert.style.display = 'block';
+      } finally {
+        loginBtn.disabled = false;
+        loginBtn.innerHTML = '<span>Log In to Dashboard</span> <i class="fa fa-arrow-right"></i>';
+      }
+    });
+  </script>
+</body>
+</html>

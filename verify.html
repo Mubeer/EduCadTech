@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+
+<head>
+    <!-- meta tag -->
+    <meta charset="utf-8" />
+    <title>EduCadTech - Education HTML Template</title>
+    <meta content="" name="description" />
+    <!-- responsive tag -->
+    <meta content="ie=edge" http-equiv="x-ua-compatible" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- favicon -->
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="assets/images/fav-orange.png" rel="shortcut icon" type="image/x-icon" />
+    <!-- Bootstrap v4.4.1 css -->
+    <!-- font-awesome css -->
+    <!-- animate css -->
+    <!-- owl.carousel css -->
+    <!-- slick css -->
+    <!-- off canvas css -->
+    <!-- linea-font css -->
+    <!-- flaticon css  -->
+    <!-- magnific popup css -->
+    <!-- Main Menu css -->
+    <!-- spacing css -->
+    <!-- style css -->
+    <!-- This stylesheet dynamically changed from style.less -->
+    <!-- responsive css -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body class="defult-home">
+    <!--Preloader area start here-->
+    <div class="loader orange-color" id="loader">
+        <div class="loader-container">
+            <div class="loader-icon">
+                <img alt="EduCadTech Logo" src="images/EduCAD Tech Logo header.png" />
+            </div>
+        </div>
+    </div>
+    <!--Preloader area End here-->
+    <!--Full width header Start-->
+    <div class="full-width-header home8-style4 main-home">
+        <!--Header Start-->
+        <header class="rs-header" id="rs-header">
+            <!-- Topbar Area Start -->
+            <!-- Topbar Area End -->
+            <!-- Menu Start -->
+            <div class="menu-area menu-sticky">
+                <div class="container">
+                    <div class="row y-middle">
+                        <div class="col-lg-2">
+                            <div class="logo-cat-wrap">
+                                <div class="logo-part">
+                                    <a href="index.html">
+                                        <img alt="EduCadTech Logo" class="normal-logo" src="images/EduCAD Tech Logo header.png" />
+                                        <img alt="EduCadTech Logo" class="sticky-logo" src="images/EduCAD Tech Logo header.png" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 text-right">
+                            <div class="rs-menu-area">
+                                <div class="main-menu">
+                                    <div class="mobile-menu">
+                                        <a class="rs-menu-toggle">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                    </div>
+                                    <nav class="rs-menu">
+                                        <ul class="nav-menu">
+                                            <li class=""><a href="index.html">Home</a></li>
+                                            <li class=""><a href="about.html">About</a></li>
+                                            <li class=""><a href="courses.html">Courses</a></li>
+                                            <li class="current-menu-item"><a href="verify.html">Verify-Certificate</a></li>
+                                            <li class=""><a href="certificate.html">Get Certificate</a></li>
+                                            <li class=""><a href="contact.html">Contact</a></li>
+                                        </ul> <!-- //.nav-menu -->
+                                    </nav>
+                                </div> <!-- //.main-menu -->
+                            </div>
+                        </div>
+                        <div class="col-lg-2 text-right">
+                            <a href="admin/login.html" class="readon orange-btn" style="padding: 8px 16px; font-size: 13px; border-radius: 4px;">
+                                <i class="fa fa-lock"></i> Admin
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Menu End -->
+        </header>
+        <!--Header End-->
+    </div>
+    <!--Full width header End-->
+    <!-- Main content Start -->
+    <div class="main-content">
+        <!-- Breadcrumbs Start -->
+        <div class="rs-breadcrumbs breadcrumbs-overlay">
+            <div class="breadcrumbs-img">
+                <img alt="Breadcrumbs Image" src="assets/images/breadcrumbs/6.jpg" />
+            </div>
+            <div class="breadcrumbs-text white-color padding">
+                <h1 class="page-title white-color">Verify Certificate</h1>
+                <ul>
+                    <li>
+                        <a class="active" href="index.html">Home</a>
+                    </li>
+                    <li>Verify Certificate</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Breadcrumbs End -->
+        <!-- Contact Section Start -->
+        <div class="contact-page-section pt-100 md-pt-70">
+            <div class="container pt-100 pb-100">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="rs-quick-contact" style="background: #ffffff; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.08); padding: 40px; border: 1px solid #eef2f6;">
+                            <div class="inner-part text-center mb-40">
+                                <span class="sub-title orange" style="color: #ac192b; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 13px;">Official Digital Credential Registry</span>
+                                <h2 class="title mb-10" style="font-size: 28px; font-weight: 700; color: #1e293b;">Live Certificate Verification</h2>
+                                <p style="color: #64748b; font-size: 14.5px;">
+                                    Verify the authenticity of credentials issued by EduCadTech. Enter the unique Certificate Number below to validate against our database registry.
+                                </p>
+                            </div>
+
+                            <form id="verify-form" onsubmit="handleCertificateVerify(event)">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-9 col-md-12 mb-20">
+                                        <div style="position: relative;">
+                                            <input class="from-control" id="verify_cert" name="certificate_number"
+                                                placeholder="Enter Certificate Number (e.g. ECT-2026-00101)" required="" type="text"
+                                                style="height: 52px; border-radius: 6px; border: 1px solid #cbd5e1; padding: 12px 18px; font-size: 15px; width: 100%;" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-12 mb-20 text-center">
+                                        <button class="readon orange-btn" type="submit" id="verifyBtn"
+                                            style="height: 52px; width: 100%; border-radius: 6px; font-weight: 600; padding: 0 15px; display: flex; align-items: center; justify-content: center;">
+                                            <i class="fa fa-search" style="margin-right: 8px;"></i> Verify
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- Demo test helper -->
+                            <div style="background: #fff7ed; border: 1px dashed #ac192b; border-radius: 8px; padding: 12px 16px; margin-top: 15px; font-size: 13px; color: #9a3412; text-align: center;">
+                                <strong><i class="fa fa-info-circle"></i> Demo Verification Hint:</strong> Test with verified certificate ID: <code>ECT-2026-00101</code>
+                            </div>
+
+                            <!-- Live Result Area -->
+                            <div id="verificationResult" style="display: none; margin-top: 30px; border-radius: 10px; padding: 25px; transition: all 0.3s ease;"></div>
+
+                            <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #f1f5f9;">
+                                <p style="font-size: 14px; color: #64748b; margin-bottom: 8px;">
+                                    Are you a student looking to check eligibility and generate your certificate?
+                                </p>
+                                <a href="certificate.html" class="readon transparent-btn" style="padding: 9px 22px; font-size: 13px; border: 1px solid #ac192b; color: #ac192b; border-radius: 6px; display: inline-block;">
+                                    <i class="fa fa-graduation-cap"></i> Student Certificate Portal
+                                </a>
+                            </div>
+
+                            <script>
+                                async function handleCertificateVerify(e) {
+                                    if (e) e.preventDefault();
+                                    const certInput = document.getElementById('verify_cert');
+                                    const btn = document.getElementById('verifyBtn');
+                                    const resultDiv = document.getElementById('verificationResult');
+
+                                    const certNum = certInput.value.trim();
+                                    if (!certNum) return;
+
+                                    btn.disabled = true;
+                                    btn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Checking...';
+                                    resultDiv.style.display = 'none';
+
+                                    try {
+                                        const res = await fetch(`/api/certificates/verify/${encodeURIComponent(certNum)}`);
+                                        const data = await res.json();
+
+                                        resultDiv.style.display = 'block';
+
+                                        if (!res.ok || !data.verified) {
+                                            if (data.status === 'revoked') {
+                                                // Revoked
+                                                resultDiv.style.background = '#fef2f2';
+                                                resultDiv.style.border = '1px solid #ef4444';
+                                                resultDiv.innerHTML = `
+                                                    <div style="display: flex; gap: 15px; align-items: flex-start;">
+                                                        <i class="fa fa-ban" style="color: #dc2626; font-size: 30px; margin-top: 4px;"></i>
+                                                        <div>
+                                                            <h4 style="color: #991b1b; font-weight: 700; margin-bottom: 5px; font-size: 18px;">Certificate Revoked</h4>
+                                                            <p style="color: #b91c1c; font-size: 14px; margin-bottom: 8px;">${data.message}</p>
+                                                            <div style="font-size: 13px; color: #7f1d1d;">
+                                                                Certificate Number: <code>${data.certificate ? data.certificate.certificate_number : certNum}</code>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                `;
+                                            } else {
+                                                // Not Found
+                                                resultDiv.style.background = '#fef2f2';
+                                                resultDiv.style.border = '1px solid #ef4444';
+                                                resultDiv.innerHTML = `
+                                                    <div style="display: flex; gap: 15px; align-items: flex-start;">
+                                                        <i class="fa fa-times-circle" style="color: #dc2626; font-size: 30px; margin-top: 4px;"></i>
+                                                        <div>
+                                                            <h4 style="color: #991b1b; font-weight: 700; margin-bottom: 5px; font-size: 18px;">Certificate Not Found</h4>
+                                                            <p style="color: #b91c1c; font-size: 14px; margin-bottom: 0;">${data.message || 'No official credential exists in our database with this certificate number.'}</p>
+                                                        </div>
+                                                    </div>
+                                                `;
+                                            }
+                                        } else {
+                                            // Verified & Valid!
+                                            const cert = data.certificate;
+                                            resultDiv.style.background = '#f0fdf4';
+                                            resultDiv.style.border = '2px solid #10b981';
+                                            resultDiv.innerHTML = `
+                                                <div style="display: flex; gap: 18px; align-items: flex-start;">
+                                                    <div style="width: 50px; height: 50px; border-radius: 50%; background: #dcfce7; color: #16a34a; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; border: 2px solid #16a34a;">
+                                                        <i class="fa fa-check"></i>
+                                                    </div>
+                                                    <div style="flex: 1;">
+                                                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
+                                                            <h3 style="color: #166534; font-size: 20px; font-weight: 700; margin: 0;">Certificate Verified Authentic</h3>
+                                                            <span style="background: #16a34a; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; letter-spacing: 0.5px;">
+                                                                OFFICIAL CREDENTIAL
+                                                            </span>
+                                                        </div>
+                                                        <p style="color: #15803d; font-size: 13.5px; margin-bottom: 14px;">
+                                                            This document has been verified against the official EduCadTech digital accreditation registry.
+                                                        </p>
+
+                                                        <div style="background: #ffffff; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px 20px; font-size: 14px; color: #1e293b;">
+                                                            <div class="row">
+                                                                <div class="col-sm-6 mb-2"><strong>Student Name:</strong> ${cert.student_name}</div>
+                                                                <div class="col-sm-6 mb-2"><strong>Course Name:</strong> ${cert.course_title}</div>
+                                                                <div class="col-sm-6 mb-2"><strong>Course Commencement:</strong> ${cert.start_date}</div>
+                                                                <div class="col-sm-6 mb-2"><strong>Course Completion:</strong> ${cert.completion_date}</div>
+                                                                <div class="col-sm-6 mb-2"><strong>Date of Issue:</strong> ${cert.issue_date}</div>
+                                                                <div class="col-sm-6 mb-2"><strong>Certificate Number:</strong> <code style="color: #ac192b; font-weight: 700;">${cert.certificate_number}</code></div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="margin-top: 16px; display: flex; gap: 12px; flex-wrap: wrap;">
+                                                            <a href="/api/certificates/${encodeURIComponent(cert.certificate_number)}/download" target="_blank" class="readon orange-btn" style="padding: 9px 22px; font-size: 13.5px; border-radius: 6px;">
+                                                                <i class="fa fa-download"></i> Download Verified PDF
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            `;
+                                        }
+                                    } catch (err) {
+                                        resultDiv.style.display = 'block';
+                                        resultDiv.style.background = '#fef2f2';
+                                        resultDiv.style.border = '1px solid #ef4444';
+                                        resultDiv.innerHTML = `<p style="color: #b91c1c; margin: 0;">Server error: ${err.message}</p>`;
+                                    } finally {
+                                        btn.disabled = false;
+                                        btn.innerHTML = '<i class="fa fa-search" style="margin-right: 8px;"></i> Verify';
+                                    }
+                                }
+
+                                // Auto verify if query param ?cert=... is present
+                                document.addEventListener('DOMContentLoaded', () => {
+                                    const params = new URLSearchParams(window.location.search);
+                                    const certParam = params.get('cert');
+                                    if (certParam) {
+                                        document.getElementById('verify_cert').value = certParam;
+                                        handleCertificateVerify();
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Section End -->
+        <!-- Newsletter section start -->
+        <!-- Newsletter section end -->
+    </div>
+    <!-- Main content End -->
+    <!-- Newsletter section start -->
+    <div class="rs-newsletter style1 orange-color mb--90 sm-mb-0 sm-pb-70">
+        <div class="container">
+            <div class="newsletter-wrap">
+                <div class="row y-middle">
+                    <div class="col-lg-6 col-md-12 md-mb-30">
+                        <div class="content-part">
+                            <div class="sec-title">
+                                <div class="title-icon md-mb-15">
+                                    <img alt="images" src="assets/images/newsletter.png" />
+                                </div>
+                                <h2 class="title mb-0 white-color"> Feel Free To Contact</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="btn-part">
+                            <a class="readon orange-btn transparent" href="contact.html">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter section end -->
+    <!-- Footer Start -->
+    <footer class="rs-footer home9-style main-home" id="rs-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget md-mb-50">
+                        <div class="footer-logo mb-30">
+                            <a href="index.html"><img alt="EduCadTech Logo" src="images/EduCAD Tech Logo footer.png" /></a>
+                        </div>
+                        <div class="textwidget pr-60 md-pr-15">
+                            <p class="white-color">We are EduCadTech, providing expert-led courses to help you advance
+                                your career. We empower learners with knowledge and practical skills.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget md-mb-50">
+                        <h3 class="widget-title">Quick Links</h3>
+                        <ul class="site-map">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="verify.html">Verify Certificate</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget md-mb-50">
+                        <h3 class="widget-title">Contact Info</h3>
+                        <ul class="address-widget">
+                            <li>
+                                <i class="flaticon-location"></i>
+                                <div class="desc">No 6B, PMR Tower, Ambattur I.E, Chennai - 58</div>
+                            </li>
+                            <li>
+                                <i class="flaticon-call"></i>
+                                <div class="desc">
+                                    <a href="tel:+91 8056812352">+91 8056812352</a>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="flaticon-email"></i>
+                                <div class="desc">
+                                    <a href="mailto:educadmanager01@gmail.com">educadmanager01@gmail.com</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget">
+                        <h3 class="widget-title">Social Media</h3>
+                        <ul class="footer_social">
+                            <li>
+                                <a href="#" target="_blank"><span><i class="fa fa-facebook"></i></span></a>
+                            </li>
+                            <li>
+                                <a href="# " target="_blank"><span><i class="fa fa-twitter"></i></span></a>
+                            </li>
+                            <li>
+                                <a href="# " target="_blank"><span><i class="fa fa-pinterest-p"></i></span></a>
+                            </li>
+                            <li>
+                                <a href="# " target="_blank"><span><i class="fa fa-google-plus-square"></i></span></a>
+                            </li>
+                            <li>
+                                <a href="# " target="_blank"><span><i class="fa fa-instagram"></i></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row y-middle">
+                    <div class="col-lg-12 text-center">
+                        <div class="copyright">
+                            <p>© 2026 EduCadTech. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- start scrollUp  -->
+    <div class="orange-color" id="scrollUp">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <!-- End scrollUp  -->
+    <!-- Search Modal Start -->
+    <div aria-hidden="true" class="modal fade search-modal" role="dialog" tabindex="-1">
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+            <span class="flaticon-cross"></span>
+        </button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="search-block clearfix">
+                    <form>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Search Here..." type="text" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search Modal End -->
+    <!-- modernizr js -->
+    <!-- jquery latest version -->
+    <!-- Bootstrap v4.4.1 js -->
+    <!-- Menu js -->
+    <!-- op nav js -->
+    <!-- owl.carousel js -->
+    <!-- Slick js -->
+    <!-- isotope.pkgd.min js -->
+    <!-- imagesloaded.pkgd.min js -->
+    <!-- wow js -->
+    <!-- Skill bar js -->
+    <!-- counter top js -->
+    <!-- video js -->
+    <!-- magnific popup js -->
+    <!-- tilt js -->
+    <!-- plugins js -->
+    <!-- contact form js -->
+    <!-- main js -->
+    <script src="js/script.js"></script><a href="https://wa.me/919003799721" id="whatsapp-btn"
+        style="position:fixed; bottom:20px; left:20px; z-index:9999; background:#25D366; color:white; padding:10px 15px; border-radius:50px; font-size:24px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2);"
+        target="_blank"><i class="fa fa-whatsapp"></i></a>
+</body>
+
+</html>
