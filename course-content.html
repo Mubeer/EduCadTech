@@ -319,30 +319,8 @@
                                 </a>
                             </div>
                         </div>
-                    
-                        <!-- End of Page Enrollment CTA Section (Issue 8) -->
-                        <div class="card p-4 mt-40 text-center" style="background: linear-gradient(135deg, #18181b 0%, #09090b 100%); border: 2px solid #ac192b; border-radius: 12px; color: #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-                            <div class="mb-15">
-                                <span class="course-hero-badge" style="background: #ac192b; font-size: 11.5px; padding: 4px 14px;">
-                                    <i class="fa fa-graduation-cap"></i> Immediate Enrollment Available
-                                </span>
-                            </div>
-                            <h3 id="ctaCourseTitle" style="color: #ffffff; font-weight: 700; margin-bottom: 12px; font-size: 24px;">
-                                Enroll in This Course
-                            </h3>
-                            <p style="color: #cbd5e1; font-size: 14.5px; max-width: 600px; margin: 0 auto 24px; line-height: 1.65;">
-                                Complete your registration in minutes. Join our industry mentors, receive 100% practical software training, and earn an accredited, verifiable digital certificate.
-                            </p>
-                            <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
-                                <button id="enrollNowBottomBtn" class="btn-brand-red" style="max-width: 280px; padding: 13px 28px; font-size: 15px; border-radius: 6px; cursor: pointer;">
-                                    <i class="fa fa-graduation-cap"></i> Enroll in This Course
-                                </button>
-                                <a href="courses.html" class="btn-brand-outline" style="max-width: 220px; margin-top: 0; border-color: #475569; color: #cbd5e1 !important; padding: 13px 22px; font-size: 15px;">
-                                    <i class="fa fa-th"></i> Browse All Courses
-                                </a>
-                            </div>
-                        </div>
-</div>
+                    </div>
+
 
                     <!-- Right Sidebar -->
                     <div class="col-lg-4">
@@ -1871,9 +1849,6 @@
             document.getElementById('breadcrumbTitle').innerText = c.title;
             document.getElementById('breadcrumbSub').innerText = c.title;
             document.getElementById('courseTitle').innerText = c.title;
-            
-            const ctaTitleEl = document.getElementById('ctaCourseTitle');
-            if (ctaTitleEl) ctaTitleEl.innerText = `Enroll in ${c.title}`;
 
             document.getElementById('courseBranchBadge').innerText = c.branch || 'Engineering';
             document.getElementById('courseCategoryBadge').innerText = c.category || 'Technical Course';
@@ -1932,12 +1907,9 @@
                 currList.appendChild(col);
             });
 
-            // Set Sidebar and End-of-Page Enroll Buttons Click
+            // Set Sidebar Enroll Button Click
             const sidebarBtn = document.getElementById('enrollNowBtn');
             if (sidebarBtn) sidebarBtn.onclick = triggerEnrollment;
-
-            const bottomBtn = document.getElementById('enrollNowBottomBtn');
-            if (bottomBtn) bottomBtn.onclick = triggerEnrollment;
         }
 
         // Fetch from API or load default data

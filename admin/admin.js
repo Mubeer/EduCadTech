@@ -46,6 +46,12 @@ async function checkAuth() {
 // NAVIGATION & SECTION SWITCHING
 // --------------------------------------------------------
 function switchSection(sectionId) {
+  // Automatically close mobile sidebar upon selecting an item
+  const sidebar = document.getElementById('adminSidebar');
+  if (sidebar && sidebar.classList.contains('open')) {
+    sidebar.classList.remove('open');
+  }
+
   // Update sidebar active link
   document.querySelectorAll('.sidebar-nav .nav-link').forEach(link => {
     link.classList.remove('active');
@@ -1197,16 +1203,33 @@ document.addEventListener('DOMContentLoaded', async () => {
         e.preventDefault();
         switchSection(link.dataset.section);
       });
+    } else {
+      link.addEventListener('click', () => {
+        const sidebar = document.getElementById('adminSidebar');
+        if (sidebar) sidebar.classList.remove('open');
+      });
     }
   });
 
   // Mobile toggle
   const mobileToggle = document.getElementById('mobileMenuToggle');
   if (mobileToggle) {
-    mobileToggle.addEventListener('click', () => {
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       document.getElementById('adminSidebar').classList.toggle('open');
     });
   }
+
+  // Close mobile sidebar on outside click
+  document.addEventListener('click', (e) => {
+    const sidebar = document.getElementById('adminSidebar');
+    const toggle = document.getElementById('mobileMenuToggle');
+    if (sidebar && sidebar.classList.contains('open')) {
+      if (!sidebar.contains(e.target) && (!toggle || !toggle.contains(e.target))) {
+        sidebar.classList.remove('open');
+      }
+    }
+  });
 
   // Refresh button
   document.getElementById('refreshBtn').addEventListener('click', () => {
